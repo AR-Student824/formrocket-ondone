@@ -10,7 +10,7 @@ app.post('/success', (req, res) => {
     res.send(`<!doctype html>
     <html>
         <head>
-                <link href="https://formrocket-ondone.lostintheabyss.repl.co/dist/output.css" rel="stylesheet">
+                <link href="https://formrocket-onsubmit.attachments.repl.co/dist/output.css" rel="stylesheet">
                 <link href="/main.css" rel="stylesheet">
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
             <title>🚀 Thank you!</title>
@@ -54,7 +54,7 @@ app.post('/lockError', (req,res) => {
     res.send(`<!doctype html>
 <html>
     <head>
-			<link href="https://formrocket-ondone.lostintheabyss.repl.co/dist/output.css" rel="stylesheet">
+			<link href="https://formrocket-onsubmit.attachments.repl.co/dist/output.css" rel="stylesheet">
 			<link href="/main.css" rel="stylesheet">
         <title>❌ Error!</title>
 				<style>
@@ -92,7 +92,7 @@ app.post('/ratelimitHit', (req, res) => {
     res.send(`<!doctype html>
 <html>
     <head>
-			<link href="https://formrocket-ondone.lostintheabyss.repl.co/dist/output.css" rel="stylesheet">
+			<link href="https://formrocket-onsubmit.attachments.repl.co/dist/output.css" rel="stylesheet">
 			<link href="/main.css" rel="stylesheet">
         <title>❌ Error!</title>
 				<style>
