@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://formrocket-onsubmit.attachments.repl.co/dist/output.css" rel="stylesheet">
+			<link href="/main.css" rel="stylesheet">
+			<style>
+					body {
+						margin: 5%;
+					}
+				</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>🚀 <%=req.query.formName%></title>
+</head>
+<body class="bg-neutral-900">
+		<h1>Configure <u><%=req.query.formName%></u></h1>
+		<p class="text-xl"><b>FORMROCKET ONDONE</b> - v2 • Click on a codeblock to copy its value</p>
+		<button class="bg-stone-800 hover:bg-stone-700 text-white py-2 px-4 rounded mt-3" style="font-size:15px;" onclick="_r('https://www.formrocket.me')">← Back</button>
+
+		<br /><br />
+
+		<Tab>
+			<h2 class="text-4xl font-bold">Set it up</h3>
+			<h3 class="text-2xl">Show Success Message onSubmit</h3>
+			<p>
+				Add this HTML to your website:<br /><br />
+				<code x-tooltip-location="bottom" x-tooltip="Copy text" class="copy bg-stone-800 p-2 rounded" style="word-break: break-word">
+&lt;form method=&quot;POST&quot; action=&quot;https://www.formrocket.me/api/forms/<%=req.query.userId%>/<%=encodeURIComponent(req.query.formName)%>/<%=req.query.formId%>/post/showSuccessMessageOnDone&quot;&gt;&lt;input name=&quot;example&quot; placeholder=&quot;example input&quot; /&gt;&lt;/form&gt;
+</code>
+<br /><br />
+<i>Optionally you can add the <code>?message=</code> parameter to the action URL to customize the success message.</i>
+			</p>
+			<br /><br />
+			<h3 class="text-2xl mb-3">Send JSON response onSubmit</h3>
+			<p><b>POST </b><code x-tooltip-location="bottom" x-tooltip="Copy text" class="copy bg-stone-800 p-2 rounded">
+				https://www.formrocket.me/api/forms/<%=req.query.userId%>/<%=encodeURIComponent(req.query.formName)%>/<%=req.query.formId%>/post
+			</code></p>
+		</Tab>
+
+		<Tab>
+			<h2 class="text-4xl font-bold">More endpoints</h2>
+			<h3 class="text-2xl mb-3">Get Form Data (as JSON)</h3>
+			<p><b>GET </b><code x-tooltip-location="bottom" x-tooltip="Copy text" class="copy bg-stone-800 p-2 rounded">
+				https://www.formrocket.me/api/forms/<%=req.query.userId%>/<%=encodeURIComponent(req.query.formName)%>/<%=req.query.formId%>/<%=req.query.formSecret%>/get
+			</code></p>
+			<br /><br />
+			<h3 class="text-4xl font-bold mb-3">Find more endpoints &amp; docs:</h3>
+			<p><code x-tooltip-location="bottom" x-tooltip="Copy text" class="copy bg-stone-800 p-2 rounded">
+				https://docs.formrocket.me
+			</code></p>
+
+		</Tab>
+	<script src="https://underdot.vercel.app/underdot.js" type="text/javascript"></script>
+	<script>
+		document.querySelectorAll('.copy').forEach(x => {
+			x.title = "Click to copy text"
+			x['data-tooltip'] = 'daddy fuck me'
+			x["data-tooltip-location"] = 'bottom'
+			x.onclick = function () {
+				_c(x.innerText).then(() => {
+					alert('Copied to clipboard!')
+				})
+			}
+		})
+	</script>
+</body>
+</html>
